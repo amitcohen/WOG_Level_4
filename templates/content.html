@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Content{% endblock %}
+{% block content %}
+    <h1>Content</h1>
+    {{ content_on_screen_msg }}<br><br>
+    <p><strong>I found the following files:</strong><br>
+    {% for i in list_of_files %}
+        <a href="{{ i }}">{{ i }}</a><br>
+    {% endfor %}</p>
+    <p><strong>Print the file content:</strong><br>
+    {% for file, file_content in file_contents %}
+        File: {{ file }} >>> {{ file_content }}<br></p>
+    {% endfor %}
+{% endblock content %}
