@@ -1,1 +1,1 @@
-cmd Dockerfile
+sudo docker build -t wog_flask .
