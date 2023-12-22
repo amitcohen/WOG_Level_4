@@ -2,8 +2,8 @@ version: '3'
 
 services:
   web:
-    image: my-python-image:latest
+    image: "my-python-image:latest"
     ports:
       - "8777:8777"
     volumes:
-      - /var/lib/jenkins/workspace/test_9_delete_me:/app
+      - "/var/lib/jenkins/workspace/test_9_delete_me:/app"
