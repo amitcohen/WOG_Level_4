@@ -2,7 +2,6 @@
 FROM python:alpine
 
 # Set the working directory in the container
-RUN mkdir -p /app
 WORKDIR /app
 
 # Copy the requirements.txt file into the container at /app
