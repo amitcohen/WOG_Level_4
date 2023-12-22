@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  web:
+  my-python-container:
     image: "my-python-image:latest"
     ports:
       - "8777:8777"
