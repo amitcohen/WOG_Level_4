@@ -6,4 +6,4 @@ services:
     ports:
       - "8777:8080"
     volumes:
-      - "/var/lib/jenkins/workspace/test_9_delete_me:/app"
+      - "/var/lib/jenkins/workspace/t10:/app"
