@@ -4,6 +4,6 @@ services:
   my-python-container:
     image: "my-python-image:latest"
     ports:
-      - "8777:80"
+      - "8777:8080"
     volumes:
       - "/var/lib/jenkins/workspace/test_9_delete_me:/app"
