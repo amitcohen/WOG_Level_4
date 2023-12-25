@@ -20,9 +20,9 @@ EXPOSE 8777
 ENV AWS_PUBLIC_IP 3.81.115.199
 
 # Run app.py when the container launches
-CMD ["python", "webapp.py"]
+# CMD ["python", "webapp.py"]
 
 # Command to run the application
 # CMD flask run --host 0.0.0.0 --port 8000
 # CMD ["python", "app.py"]
-# CMD ["sh", "-c", "flask run --host 0.0.0.0 --port 8777 & python app.py"]
+CMD ["sh", "-c", "flask run --host 0.0.0.0 --port 8777 & python app.py"]
