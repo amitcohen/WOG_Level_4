@@ -24,5 +24,6 @@ ENV AWS_PUBLIC_IP 3.81.115.199
 
 # Command to run the application
 # CMD flask run --host 0.0.0.0 --port 8000
-# CMD ["python", "app.py"]
-CMD ["sh", "-c", "flask run --host 0.0.0.0 --port 8777 & python app.py"]
+CMD ["python", "app.py"]
+
+# CMD ["sh", "-c", "flask run --host 0.0.0.0 --port 8777 & python app.py"]
