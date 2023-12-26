@@ -1,15 +1,10 @@
 version: '3'
 
 services:
-  my-python-app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: my-python-image
-    container_name: my-python-container
+  web:
+    build: .
     ports:
       - "8777:8777"
-    environment:
-      - AWS_PUBLIC_IP=107.22.32.203
+      
     volumes:
       - "/var/lib/jenkins/workspace/t10:/app"
