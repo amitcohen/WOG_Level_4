@@ -7,4 +7,4 @@ services:
       - "8777:8777"
       
     volumes:
-      - "/var/lib/jenkins/workspace/t10:/app"
+      - "/var/lib/jenkins/workspace/t9:/app"
