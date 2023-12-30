@@ -1,21 +1,15 @@
-# Use an official Python runtime as a parent image
-FROM python:3.8
+FROM python:3.9-alpine
 
-# Set the working directory to /app
-WORKDIR /app
+WORKDIR /flask_app
 
-# Copy the current directory contents into the container at /app
-COPY . /app
+COPY requirements.txt .
 
-# Install any needed packages specified in requirements.txt
-RUN pip install --upgrade pip setuptools
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Make port 8777 available to the world outside this container
-EXPOSE 8777
+RUN pip install pytest
 
-# Define environment variable
-ENV NAME World
+COPY app/ .
 
-# Run app.py when the container launches
-CMD ["python", "webapp.py"]
+COPY tests/ app/tests/
+
+CMD [ "python", "app.py" ]
