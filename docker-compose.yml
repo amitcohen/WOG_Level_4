@@ -1,10 +1,10 @@
 version: '3'
-
 services:
-  web:
-    build: .
-    ports:
-      - "8777:8777"
-      
+  flask-app:
+    image: python:3.8-slim
     volumes:
-      - "/var/lib/jenkins/workspace/t9:/app"
+      - ./webapp.py:/app/webapp.py
+    working_dir: /app
+    ports:
+      - "5000:5000"
+    command: "python webapp.py"
